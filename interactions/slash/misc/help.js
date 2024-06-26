@@ -11,7 +11,7 @@ const { EmbedBuilder, SlashCommandBuilder, Embed } = require("discord.js");
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName("help")
-		.setDescription("Display available slash commands"),
+		.setDescription("Mostrar los comandos disponibles"),
 	async execute(interaction) {
 		const commands = (
 			await interaction.client.application.commands.fetch()
@@ -25,7 +25,7 @@ module.exports = {
 			.join("\n");
 
 		const embed = new EmbedBuilder()
-			.setTitle("⚙️ Available Commands")
+			.setTitle("⚙️ Comandos disponibles")
 			.setDescription(commandList)
 			.setColor("Blurple");
 
