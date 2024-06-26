@@ -242,7 +242,7 @@ const commandJsonData = [
 
 (async () => {
 	try {
-		console.log("Started refreshing application (/) commands.");
+		console.log("Comenzó a actualizar los comandos de la aplicación (/).");
 
 		await rest.put(
 			Routes.applicationCommands(client_id),
@@ -250,7 +250,7 @@ const commandJsonData = [
 			{ body: commandJsonData },
 		);
 
-		console.log("Successfully reloaded application (/) commands.");
+		console.log("Comandos de aplicación (/) recargados correctamente.");
 	} catch (error) {
 		console.error(error);
 	}
@@ -263,7 +263,7 @@ client.login(token);
 /**********************************************************************/
 // Anti Crash script
 process.on("unhandledRejection", (reason, promise) => {
-	console.error(`🚫 Critical Error detected:\n\n`, reason, promise);
+	console.error(`🚫 Error crítico detectado:\n\n`, reason, promise);
 
 	// Uncomment the below lines below to see the full error details. - ADVANCED DEBUGGING //
 
@@ -272,7 +272,7 @@ process.on("unhandledRejection", (reason, promise) => {
 });
 
 process.on("uncaughtException", (error, origin) => {
-	console.error(`🚫 Critical Error detected:\n\n`, error, origin);
+	console.error(`🚫 Error crítico detectado:\n\n`, error, origin);
 
 	// Uncomment the below lines below to see the full error details. - ADVANCED DEBUGGING //
 
