@@ -89,43 +89,43 @@ async function getNsfwWords() {
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName("image")
-		.setDescription("Have AI generate an image!")
+		.setDescription("¡Haga que PogoGPT genere una imagen!")
 		.addStringOption((o) =>
 			o
 				.setName("prompt")
-				.setDescription("The description of the image to generate!")
+				.setDescription("La descripción de la imagen a generar")
 				.setRequired(true),
 		)
 		.addStringOption((o) =>
 			o
 				.setName("model")
-				.setDescription("The Model to Use")
+				.setDescription("El modelo a utilizar")
 				.setAutocomplete(true),
 		)
 		.addStringOption((o) =>
-			o.setName("negative-prompt").setDescription("The Negative Prompt to Use"),
+			o.setName("negative-prompt").setDescription("El mensaje negativo de uso"),
 		)
 		.addIntegerOption((option) =>
 			option
 				.setName("steps")
-				.setDescription("The Number of Steps to Use")
+				.setDescription("El número de pasos a seguir")
 				.setMinValue(1)
 				.setMaxValue(50),
 		)
 		.addIntegerOption((option) =>
 			option
 				.setName("cfg-scale")
-				.setDescription("The CFG Scale")
+				.setDescription("La escala CFG")
 				.setMinValue(1)
 				.setMaxValue(20),
 		)
 		.addIntegerOption((option) =>
-			option.setName("seed").setDescription("The Seed").setMinValue(-1),
+			option.setName("seed").setDescription("La semilla").setMinValue(-1),
 		)
 		.addStringOption((option) =>
 			option
 				.setName("style-preset")
-				.setDescription("The Image Style Preset")
+				.setDescription("El estilo de imagen preestablecido")
 				.addChoices(
 					{ name: "3d Model", value: "3d-model" },
 					{ name: "Analog Film", value: "analog-film" },
@@ -147,7 +147,7 @@ module.exports = {
 				),
 		)
 		.addStringOption((option) =>
-			option.setName("sampler").setDescription("The Image Sampler").addChoices(
+			option.setName("sampler").setDescription("La muestra de imágenes").addChoices(
 				{ name: "Euler a", value: "Euler a" },
 				{ name: "LMS", value: "LMS" },
 				{ name: "Heun", value: "Heun" },
@@ -182,7 +182,7 @@ module.exports = {
 			),
 		)
 		.addBooleanOption((o) =>
-			o.setName("upscale").setDescription("Enable 2x Upscale"),
+			o.setName("upscale").setDescription("Habilitar 2x exclusivo"),
 		)
 		.addIntegerOption((option) =>
 			option
