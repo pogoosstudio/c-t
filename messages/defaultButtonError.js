@@ -15,7 +15,7 @@ module.exports = {
 	async execute(interaction) {
 		if (excluded_ids.includes(interaction.customId)) return;
 		await interaction.reply({
-			content: "There was an issue while fetching this button!",
+			content: "¡Hubo un problema al ejecutar este botón!",
 			ephemeral: true,
 		});
 		return;
